@@ -26,6 +26,9 @@
 # Visual Studio cache directory
 .vs/
 
+# Plastic SCM cache directory
+.plastic/
+
 # Gradle cache directory
 .gradle/
 

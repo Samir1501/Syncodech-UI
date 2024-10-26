@@ -1,0 +1,4 @@
+repository "UISystem@Syncodech@cloud"
+  path "/"
+    br "/main"
+    co "/main"

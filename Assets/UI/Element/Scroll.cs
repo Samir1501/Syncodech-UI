@@ -27,6 +27,12 @@ namespace UISystem
             Set(value);
         }
 
+        public void Set(float value, float size, bool callback = true)
+        {
+            this.size = size;
+            Set(value);
+        }
+        
         public void Set(float value, bool callback = true)
         {
             float resultValue = value;

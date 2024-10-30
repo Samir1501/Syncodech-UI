@@ -9,7 +9,7 @@ namespace UISystem
     {
         private RectTransform _containerRect;
         [SerializeField] private Direction direction;
-        [SerializeField] [Range(0, 1)] private float value;
+        [SerializeField] [Range(0, 1)] public float value;
         [SerializeField] [Range(0, 1)] private float size;
         [SerializeField] [Range(1, 11)] private int numberOfSteps;
         [SerializeField] private Handle handle;
@@ -29,21 +29,18 @@ namespace UISystem
 
         public void Set(float value, float size, bool callback = true)
         {
-            this.size = size;
-            Set(value);
+            this.size = Mathf.Clamp01(size);
+            Set(value,callback);
         }
         
         public void Set(float value, bool callback = true)
         {
-            float resultValue = value;
-            if (numberOfSteps > 1)
-            {
-                resultValue = Mathf.Round(Mathf.Lerp(0, numberOfSteps-1, value));
-                handle.Set(resultValue / (numberOfSteps-1), size, direction);
-            }
-            else handle.Set(value, size, direction);
+            this.value = value;
+          
+            this.value = numberOfSteps > 1 ? Mathf.Round(Mathf.Lerp(0, numberOfSteps-1, value)) / (numberOfSteps-1) : value;
 
-            if(callback) onChange.Invoke(resultValue);
+            handle.Set(this.value, size, direction);
+            if(callback) onChange.Invoke(this.value);
         }
         
         private void OnMove(PointerEventData eventData)

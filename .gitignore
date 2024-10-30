@@ -10,6 +10,9 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Never ignore Asset meta data
+!/[Aa]ssets/**/*.meta
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -75,4 +78,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # TextMesh Pro files
-[Aa]ssets/TextMesh*Pro/
+/[Aa]ssets/TextMesh*Pro/
+/[Aa]ssets/TextMesh*Pro.meta

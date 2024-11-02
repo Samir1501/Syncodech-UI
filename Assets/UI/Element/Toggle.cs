@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     public class Toggle : Selectable,IPointerClickHandler
     {

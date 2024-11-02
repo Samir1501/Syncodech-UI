@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     [ExecuteAlways]
     public class PanelManager : UIBehaviour
@@ -11,10 +11,16 @@ namespace UISystem
 
         private void OnValidate()
         {
-            ChangePanel(panelIndex);
+            Change(panelIndex);
         }
 
-        public void ChangePanel(int index)
+        public Panel Get(int index)
+        {
+            if (index < 0 || index >= panels.Count) return null;
+            return panels[index];
+        }
+        
+        public Panel Change(int index)
         {
             index = Mathf.Clamp(index, 0, panels.Count - 1);
             panelIndex = index;
@@ -22,6 +28,7 @@ namespace UISystem
             {
                 panels[i].Visible(i == index);
             }
+            return panels[panelIndex];
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     public class WindowElement : UIBehaviour
     {

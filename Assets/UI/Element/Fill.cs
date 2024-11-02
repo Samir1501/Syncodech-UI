@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     [Serializable]
     public class Fill : UIVisual

@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     [Serializable]
     public struct TransitionBlock

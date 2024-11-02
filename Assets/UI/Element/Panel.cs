@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     public enum Side
     {

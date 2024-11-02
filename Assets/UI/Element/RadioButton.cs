@@ -3,14 +3,13 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     [ExecuteAlways]
     public class RadioButton : Selectable, IPointerClickHandler
     {
         private RadioButtonGroup _group;
-        public Field field;
-        [FormerlySerializedAs("fieldComponent")] public FieldGroup fieldGroupComponent;
+        public FieldElement field;
         [SerializeField] internal int index;
         [SerializeField] private bool isOn;
 
@@ -45,30 +44,38 @@ namespace UISystem
         
         private void OnBeforeTransformParentChanged()
         {
-            if(_group == null) return;
-            _group.Remove(this);
+            Remove();
         }
 
         private void OnDestroy()
         {
+            Remove();
+        }
+
+        public RadioButton Add()
+        {
+            SetGroup(GetComponentInParent<RadioButtonGroup>(true));
+            if(_group == null) return null;
+            _group.Add(this);
+            return this;
+        }
+
+        public void Remove()
+        {
             if(_group == null) return;
             _group.Remove(this);
         }
-
+        
         private void OnTransformParentChanged()
         {
-            SetGroup(GetComponentInParent<RadioButtonGroup>(true));
-            if (_group != null)
-            {
-                _group.Add(this);
-            }
+            Add();
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             if (!IsInteractable()) return;
             IsOn = !IsOn;
-            if(_group != null && isOn) _group.Change(this);
+            if(_group != null && isOn) _group.Change(index);
         }
     }
 }

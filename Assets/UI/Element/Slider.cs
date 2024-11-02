@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     [ExecuteAlways]
     public class Slider : Selectable, IDragHandler

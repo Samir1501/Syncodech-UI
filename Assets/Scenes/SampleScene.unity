@@ -773,7 +773,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 432145766}
         m_TargetAssemblyTypeName: "UISystem.PanelManager, U\u0130System"
-        m_MethodName: ChangePanel
+        m_MethodName: Change
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1806,7 +1806,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  value: 1
+  value: 0
   canvasGroup: {fileID: 0}
   openSide: 0
   closeSide: 1
@@ -1859,7 +1859,7 @@ RectTransform:
   m_GameObject: {fileID: 289003717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 267319550}
@@ -1867,8 +1867,8 @@ RectTransform:
   - {fileID: 797566750}
   m_Father: {fileID: 432145764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: -0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 2, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -40, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2239,7 +2239,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 432145766}
         m_TargetAssemblyTypeName: "UISystem.PanelManager, U\u0130System"
-        m_MethodName: ChangePanel
+        m_MethodName: Change
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa478dc576cd6f459b4e2a400fdbf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelIndex: 2
+  panelIndex: 1
   panels:
   - {fileID: 247701380}
   - {fileID: 1759454102}
@@ -7175,7 +7175,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 432145766}
         m_TargetAssemblyTypeName: "UISystem.PanelManager, U\u0130System"
-        m_MethodName: ChangePanel
+        m_MethodName: Change
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8701,7 +8701,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 432145766}
         m_TargetAssemblyTypeName: "UISystem.PanelManager, U\u0130System"
-        m_MethodName: ChangePanel
+        m_MethodName: Change
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10029,7 +10029,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 432145766}
         m_TargetAssemblyTypeName: "UISystem.PanelManager, U\u0130System"
-        m_MethodName: ChangePanel
+        m_MethodName: Change
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10533,7 +10533,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  value: 0
+  value: 1
   canvasGroup: {fileID: 0}
   openSide: 0
   closeSide: 1
@@ -10586,7 +10586,7 @@ RectTransform:
   m_GameObject: {fileID: 1759454101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 682370447}
@@ -10594,8 +10594,8 @@ RectTransform:
   - {fileID: 1394639670}
   m_Father: {fileID: 432145764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 2, y: 1}
+  m_AnchorMin: {x: -0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -40, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}

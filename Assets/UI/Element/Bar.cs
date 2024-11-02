@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     public enum BarType : byte
     {

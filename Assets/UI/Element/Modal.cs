@@ -1,26 +1,61 @@
-using UISystem;
 using UnityEngine;
+using UnityEngine.Events;
 
-[ExecuteAlways]
-public class Modal : WindowElement
+namespace Syncodech.UI
 {
-    protected override void OnEnable()
+    [ExecuteAlways]
+    public class Modal : WindowElement
     {
-        base.OnEnable();
-        OnValueChanged += () =>
+        [SerializeField] private Button confirmButton;
+        [SerializeField] private Button rejectButton;
+        
+        public UnityEvent onConfirmed;
+        public UnityEvent onRejected;
+        protected override void OnEnable()
         {
-            Scale();
-            CanvasActive();
-        };
-    }
+            base.OnEnable();
+            OnValueChanged += () =>
+            {
+                Scale();
+                CanvasActive();
+            };
+            confirmButton?.onClick.AddListener(Confirm);
+            rejectButton?.onClick.AddListener(Reject);
+        }
+        
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            confirmButton?.onClick.RemoveListener(Confirm);
+            rejectButton?.onClick.RemoveListener(Reject);
+        }
 
-    public void Open()
-    {
-        CheckVisibility(true);    
-    }
+        public void ShowButtons(bool value)
+        {
+            confirmButton?.gameObject.SetActive(value);
+            rejectButton?.gameObject.SetActive(value);
+        }
+        
+        private void Confirm()
+        {
+            onConfirmed.Invoke();
+            Close();
+        }
 
-    public void Close()
-    {
-        CheckVisibility(false);
+        private void Reject()
+        {
+            onRejected.Invoke();
+            Close();
+        }
+        
+        public void Open()
+        {
+            CheckVisibility(true);
+        }
+
+        public void Close()
+        {
+            CheckVisibility(false);
+        }
     }
 }

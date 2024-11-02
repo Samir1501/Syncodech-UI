@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     [ExecuteInEditMode]
     public class Selectable : UIBehaviour,

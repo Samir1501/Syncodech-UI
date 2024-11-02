@@ -2,7 +2,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
-namespace UISystem
+namespace Syncodech.UI
 {
     public class Button : Selectable, IPointerClickHandler
     {

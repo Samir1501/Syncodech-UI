@@ -1123,6 +1123,14 @@ MonoBehaviour:
     m_RotationOrder: 4
   value: 0
   canvasGroup: {fileID: 2098925424}
+  confirmButton: {fileID: 1585734322}
+  rejectButton: {fileID: 603930892}
+  onConfirmed:
+    m_PersistentCalls:
+      m_Calls: []
+  onRejected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &200800759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3710,9 +3718,10 @@ MonoBehaviour:
     duration: 0.1
   interactable: 1
   field:
-    text: {fileID: 0}
-    image: {fileID: 0}
-  fieldGroupComponent: {fileID: 0}
+    field:
+      text: {fileID: 0}
+      image: {fileID: 0}
+    group: {fileID: 0}
   index: 0
   isOn: 1
   onChange:
@@ -7899,9 +7908,10 @@ MonoBehaviour:
     duration: 0.1
   interactable: 1
   field:
-    text: {fileID: 0}
-    image: {fileID: 0}
-  fieldGroupComponent: {fileID: 0}
+    field:
+      text: {fileID: 0}
+      image: {fileID: 0}
+    group: {fileID: 0}
   index: 2
   isOn: 0
   onChange:
@@ -9278,9 +9288,10 @@ MonoBehaviour:
     duration: 0.1
   interactable: 1
   field:
-    text: {fileID: 0}
-    image: {fileID: 0}
-  fieldGroupComponent: {fileID: 0}
+    field:
+      text: {fileID: 0}
+      image: {fileID: 0}
+    group: {fileID: 0}
   index: 1
   isOn: 0
   onChange:
@@ -9612,19 +9623,7 @@ MonoBehaviour:
     group: {fileID: 0}
   onClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 200800758}
-        m_TargetAssemblyTypeName: "Modal, U\u0130System"
-        m_MethodName: Close
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1585734323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11505,6 +11504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentIndex: 0
   nextIndex: 3
+  prefab: {fileID: 0}
+  container: {fileID: 0}
   radioButtons:
   - {fileID: 530048797}
   - {fileID: 1574749907}
